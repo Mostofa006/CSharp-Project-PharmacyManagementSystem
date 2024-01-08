@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{62279F74-BA39-45A4-875C-ACE2D2A5701F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsProject</RootNamespace>
+    <AssemblyName>WindowsFormsProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminUserControl\UCAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\UCAddUser.Designer.cs">
+      <DependentUpon>UCAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\UCDashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\UCDashBoard.Designer.cs">
+      <DependentUpon>UCDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\UCProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\UCProfile.Designer.cs">
+      <DependentUpon>UCProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUserControl\UCViewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUserControl\UCViewUser.Designer.cs">
+      <DependentUpon>UCViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="EmployeeUserControl\UCAddMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCAddMedicine.Designer.cs">
+      <DependentUpon>UCAddMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCMedicineValidityCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCMedicineValidityCheck.Designer.cs">
+      <DependentUpon>UCMedicineValidityCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCSellMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCSellMedicine.Designer.cs">
+      <DependentUpon>UCSellMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCUpdateMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCUpdateMedicine.Designer.cs">
+      <DependentUpon>UCUpdateMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCViewMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeUserControl\UCViewMedicine.Designer.cs">
+      <DependentUpon>UCViewMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MyDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminUserControl\UCAddUser.resx">
+      <DependentUpon>UCAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\UCDashBoard.resx">
+      <DependentUpon>UCDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\UCProfile.resx">
+      <DependentUpon>UCProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUserControl\UCViewUser.resx">
+      <DependentUpon>UCViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUserControl\UCAddMedicine.resx">
+      <DependentUpon>UCAddMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUserControl\UCMedicineValidityCheck.resx">
+      <DependentUpon>UCMedicineValidityCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUserControl\UCSellMedicine.resx">
+      <DependentUpon>UCSellMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUserControl\UCUpdateMedicine.resx">
+      <DependentUpon>UCUpdateMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeUserControl\UCViewMedicine.resx">
+      <DependentUpon>UCViewMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="MyDBDataSet.xsc">
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet.xss">
+      <DependentUpon>MyDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet11.xsc">
+      <DependentUpon>MyDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet11.xss">
+      <DependentUpon>MyDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet2.xsc">
+      <DependentUpon>MyDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet2.xss">
+      <DependentUpon>MyDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet3.xsc">
+      <DependentUpon>MyDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet3.xss">
+      <DependentUpon>MyDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet4.xsc">
+      <DependentUpon>MyDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet4.xss">
+      <DependentUpon>MyDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet5.xsc">
+      <DependentUpon>MyDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet5.xss">
+      <DependentUpon>MyDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet6.xsc">
+      <DependentUpon>MyDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet6.xss">
+      <DependentUpon>MyDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet7.xsc">
+      <DependentUpon>MyDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MyDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyDBDataSet7.xss">
+      <DependentUpon>MyDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20180103-healthwise-pharmacy-008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pharmacy-management.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-public-services-icon-pharmacy-icon-dispensary-icon-601b33e8887a76.402989061612395496559.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20180103-healthwise-pharmacy-0081.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\street-pharmacy-icon-simple-style-vector-27323271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-pharmacy-building-elements-icons-in-line-style-good-for-prints-web-posters-logo-site-plan-map-infographics-etc-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-login-sign-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-cross-isolated-medical-or-pharmacy-icon-vector-31047644.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BPSA_blog_celebratingpharmacists.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashbord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashbord1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
